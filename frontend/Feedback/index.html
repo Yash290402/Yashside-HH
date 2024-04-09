@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <link rel="stylesheet" href="Fd.css">
+    <link rel="stylesheet" href="A:\Study\Web\Helpers-Hand\headfoot\newfoot.css">
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous">
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+    </style>
+    <!-- FOR Navbar -->
+    <link rel="stylesheet" href="A:\Study\Web\Helpers-Hand\headfoot\navbar.css">
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+
+    <nav class="navbar">
+
+        <div class="navbar-container">
+
+            <div class="navbar-logo">
+                <img src="Logo.png" alt="Logo">
+            </div>
+
+            <div class="navbar-search">
+
+                <div class="search">
+                    <input placeholder="Search here for services" type="text">
+                    <i class='bx bx-search'></i>
+                </div>
+
+            </div>
+
+            <div class="navbar-links">
+                <a href="../homepage/home.html" class="nav-link">Home</a>
+                <a href="../Contact us/contactus.html" class="nav-link">Contact Us</a>
+                <a href="../about us/index.html" class="nav-link">About Us</a>
+                <a href="../Feedback/index.html" class="nav-link home">Feedback</a>
+            </div>
+
+            <div class="navbar-buttons">
+
+                <a href="../login/login.html"><button>Login/Sign Up
+                    </button></a>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- content -->
+    <div class="title">
+        Your Feedback make us improve!!!!
+    </div>
+
+    <div class="horline"></div>
+
+    <div class="wrap1">
+
+        <div class="box1">
+
+            <div class="input-box" id="Name-box">
+                <i class="bx bxs-user"></i>
+                <input class="perName" type="text" placeholder="Enter Name" required />
+            </div>
+
+            <div class="input-box" id="Email-id-box">
+                <i class="bx bxs-envelope"></i>
+                <input class="perEID" type="email" placeholder="Enter Email-id" required />
+            </div>
+
+            <div class="input-box" id="Message-box">
+                <textarea class="Message" type="text" placeholder="Message..." style="width: 371px; 
+                height: 252px;" required></textarea>
+            </div>
+
+
+
+            <!-- star -->
+            <div class="star-box">
+                <header>How was Your experience?</header>
+
+                <div class="stars">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                </div>
+
+            </div>
+
+            <div class="sub">
+                <input class="sub-btn" type="submit" value="Submit">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+
+    <div class="footer">
+        <div class="content">
+            <div class="services footoff">
+                <h4>Services</h4>
+                <p><a href="#">Plumber</a></p>
+                <p><a href="#">Carpenter</a></p>
+                <p><a href="#">Painter</a></p>
+                <p><a href="#">House Cleaner</a></p>
+                <p><a href="#">RO mechanic</a></p>
+                <p><a href="#">AC mechanic</a></p>
+                <p><a href="#">Others</a></p>
+            </div>
+
+            <div class="links footoff">
+                <h4>Quick links</h4>
+                <p><a href="../homepage/home.html">Home</a></p>
+                <p><a href="../about us/index.html">About Us</a></p>
+                <p><a href="../Contact us/contactus.html">Contact Us</a></p>
+                <p><a href="../Feedback/index.html">Give Feedback</a></p>
+                <p><a href="#">Reviews</a></p>
+                <p><a href="#">Terms & Conditions</a></p>
+            </div>
+
+            <div class="social-media footoff">
+                <h4>Social</h4>
+                <p>
+                    <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+                </p>
+                <p>
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                </p>
+                <p>
+                    <a href=""><i class="fab fa-github"></i> Github</a>
+                </p>
+                <p>
+                    <a href=""><i class="fab fa-facebook"></i> Facebook</a>
+                </p>
+                <p>
+                    <a href=""><i class="fab fa-instagram"></i> Instagram</a>
+                </p>
+            </div>
+
+            <div class="details footoff">
+                <h4 class="address">Address</h4>
+                <p>
+                    A-20 Ahmedabad, Gujarat, India
+                    <!-- Lorem ipsum dolor sit amet consectetur <br />
+                  adipisicing elit. Cupiditate, qui! -->
+                </p>
+                <h4 class="mobile">Mobile</h4>
+                <p><a href="#">+91 5465466546</a></p>
+                <h4 class="mail">Email</h4>
+                <p><a href="#">Helperhand@gmail.com</a></p>
+            </div>
+        </div>
+        <footer>
+            <hr />
+            ©️ 2023 Helperhands. All rights reserved
+        </footer>
+    </div>
+    <script src="fd.js"></script>
+</body>
+
+<script>
+    const stars = document.querySelectorAll(".stars i");
+    stars.forEach((star, index1) => {
+        star.addEventListener("click", () => {
+            stars.forEach((star, index2) => {
+                index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
+            })
+        })
+    })
+</script>
+
+</html>

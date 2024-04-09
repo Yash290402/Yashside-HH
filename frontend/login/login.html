@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and Register</title>
+    <link rel="stylesheet" href="login.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- <script src="login.js"></script> -->
+</head>
+
+<body>
+
+    <div class="backer">
+        <a href="../Contact us/contactus.html" class="backerpointer">
+            <i class="bx bxs-left-arrow"></i>
+        </a>
+    </div>
+
+    <div class="img">
+        <img src="Logo.png" alt="Logo">
+    </div>
+
+    <div class="wrap" id="wrap">
+        <span class="bg-ani"></span>
+        <span class="bg-ani2"></span>
+
+        <div class="form-box login">
+            <h2 class="ani" style="--i:0; --j:21">Log-in</h2>
+            <form id="loginForm" onsubmit="return false;">
+                <div class="input-box ani" style="--i:1; --j:22">
+                    <input type="text" id="loginUsername" required />
+                    <label>Username</label>
+                    <i class="bx bxs-user"></i>
+                </div>
+
+                <div class="input-box ani" style="--i:2; --j:23">
+                    <input type="password" id="loginPassword" required />
+                    <label>Password</label>
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+
+                <button type="submit" class="btn ani" onclick="login()">Login</button>
+
+                <div class="logtoreg-link ani" style="--i:4; --j:25">
+                    <p>
+                        Don't have an account?
+                        <a href="#" class="register-link" onclick="toggleForm('register')">Sign-up</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <div class="info-text login">
+            <h2 class="ani" style="--i:0; --j:20">Welcome Back!</h2>
+            <p class="ani" style="--i:1; --j:21">.</p>
+        </div>
+
+        <div class="form-box register">
+            <h2 class="ani" style="--i:16; --j:0">Sign-Up</h2>
+            <form id="registerForm" onsubmit="return false;">
+                <div class="input-box ani" style="--i:17; --j:1">
+                    <input type="text" id="registerUsername" required />
+                    <label>Username</label>
+                    <i class="bx bxs-user"></i>
+                </div>
+
+                <div class="input-box ani" style="--i:18; --j:2">
+                    <input type="email" id="registerEmail" required />
+                    <label>Email-id</label>
+                    <i class="bx bxs-envelope"></i>
+                </div>
+
+                <div class="input-box ani" style="--i:19; --j:3">
+                    <input type="password" id="registerPassword" required />
+                    <label>Password</label>
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+
+                <button type="submit" class="btn ani" onclick="register()">Sign-In</button>
+
+                <div class="logtoreg-link ani" style="--i:21; --j:5">
+                    <p>
+                        Already have an account?
+                        <a href="#" class="login-link" onclick="toggleForm('login')">Log-in</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <div class="info-text register">
+            <h2 class="ani" style="--i:17; --j:0;">Welcome Back!</h2>
+            <p class="ani" style="--i:18; --j:1;"></p>
+        </div>
+
+    </div>
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>
+
