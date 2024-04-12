@@ -1,9 +1,15 @@
 import mongoose, { Schema } from "mongoose";
 
+const availpincode=new Schema({
+    pincode:{
+        type:String,
+    }
+})
 
 const review = new Schema({
+
     username: {
-        type: string,
+        type: String,
         required: true,
         lowercase: true,
         trim: true,
@@ -36,6 +42,7 @@ const Book = new Schema({
 });
 
 const pastbooks = new Schema({
+    
     bookingId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Booking'
@@ -129,7 +136,7 @@ const serviceInfo = new Schema({
     },
 
     pincode: {
-        type: Number,
+        type: String,
         required: true,
     },
 

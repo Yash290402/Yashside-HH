@@ -1,49 +1,43 @@
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
 
-    form.addEventListener("submit", function(event) {
+    form.addEventListener("submit",async function(event) {
         event.preventDefault(); // Prevent the default form submission
 
-        const serviceInput = document.querySelector(".service");
-        const pincodeInput = document.querySelector(".pincode");
-        
-        const service = serviceInput.value.trim();
-        const pincode = pincodeInput.value.trim();
-
-        console.log("Search:", service);
+        const Catagory = document.querySelector(".category").value.trim();
+        const pincode = document.querySelector(".pincode").value.trim();
+        const city = document.querySelector(".city").value.trim();
+    
+        console.log("Search:", Catagory);
         console.log("Pincode:", pincode);
+        console.log("City:", city);
 
-        // Construct the search query data to be sent to the server
-        const search = {
-            service: service,
-            pincode: pincode
-        };
+       
 
         // Send the search query to the backend server using Fetch API
-        fetch('http://localhost:5500/api/v1/users/search', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                // Add any other headers if needed
-            },
-            body: JSON.stringify(search)
-        })
-        .then(response => {
-            // Handle the response from the server
-            if (response.ok) {
-                return response.json(); // Parse the JSON response
+        try {
+           const response=await fetch('http://localhost:5500/api/v1/users/serviceProfile', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    // Add any other headers if needed
+                },
+                body: JSON.stringify({Catagory, city,pincode})
+            })
+
+            if(!response.ok){
+                throw new Error('Network response was not ok.');
             }
-            throw new Error('Network response was not ok.');
-        })
-        .then(searchResults => {
-            // Handle the search results received from the server
-            console.log('Search results:', searchResults);
-            // You can display the search results on the frontend here
-        })
-        .catch(error => {
-            // Handle errors that occur during the fetch
-            console.error('There was a problem with the fetch operation:', error);
-        });
+
+            const data = await response.json();
+
+            console.log('Feedback submission successful:', data);
+            
+         
+            
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);   
+        }
     });
 });
 
