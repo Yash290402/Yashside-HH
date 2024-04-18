@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="/submit" method="post" >
+
+        <input type="text" placeholder="Enter providername" name="providername">
+        
+        <input type="text" placeholder="Enter Service" name="category">
+
+        <!-- Use textarea to accept multiple pincodes -->
+        <textarea placeholder="Enter Pincodes (comma-separated)" name="pincodes"></textarea>
+
+        <input type="text" placeholder="Enter City" name="city">
+        
+        <input type="number" placeholder="Enter Charges for booking" name="charges">
+        <input type="file" name="file" class="avatar" placeholder="choose file">
+
+        
+        <select name="availability">
+            <option value="none" selected disabled hidden>Is available</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+
+        <button type="submit" class="items">submit</button>
+
+    </form>
+    <script src="spadd.js"></script>
+
+</body>
+</html>

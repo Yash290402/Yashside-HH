@@ -25,8 +25,6 @@ const submitFeedback = async (req, res) => {
             email,
             message,
             rating,
-            
-            
         });
 
         return res.status(201).json({

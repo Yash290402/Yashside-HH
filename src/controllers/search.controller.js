@@ -10,7 +10,7 @@ const search = asynchandler(async (req, res) => {
     }
 
     const searchResults = await ServiceInfo.findOne({
-        Catagory: { $regex: new RegExp(Catagory, "i") }, // Case-insensitive search
+        Catagory, // Case-insensitive search
         pincode,
         city
     });

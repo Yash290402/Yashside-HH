@@ -1,8 +1,5 @@
 import mongoose, { Schema } from "mongoose";
 
-
-
-
 const feedbackSchema = new mongoose.Schema({
     name: {
         type: String,
