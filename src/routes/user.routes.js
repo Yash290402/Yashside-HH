@@ -12,6 +12,8 @@ import { serviceProfile } from '../controllers/serviceProfile.controller.js'
 
 import {upload} from '../middlewares/multer.middleware.js'
 
+import { bookTimeSlot } from "../controllers/booking.controller.js";
+
 const router = Router();
 
 
@@ -34,5 +36,7 @@ router.route("/serviceProfile").post(upload.fields([
     },
 
 ]), serviceProfile)
+
+router.route("/book").post(bookTimeSlot)
 
 export default router;
