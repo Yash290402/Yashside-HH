@@ -1,10 +1,14 @@
 import mongoose, { Schema } from 'mongoose'
 
 const BookingSchema = new Schema({
-    
-    bookedAt: {
-        type: Date,
-        default: Date.now
+
+    time: {
+        type:'String',
+        required: true,
+    },
+    ischecked: {
+        type:'Boolean',
+        default: false,
     }
 }, {
     timestamps: true,

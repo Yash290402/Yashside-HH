@@ -2,8 +2,12 @@ import { Booking } from "../models/bookings.model.js";
 
 const bookTimeSlot = async (req, res) => {
     try {
-        const { bookAt } = req.body;
-        const booking = new Booking({ bookAt });
+        const { time,ischecked } = req.body;
+        console.log(time,ischecked)
+        // if(!ischecked){
+        //     booking.ischecked=true;
+        // }
+        const booking = new Booking({ time ,ischecked: true });
         await booking.save();
         res.status(201).json({ message: 'Slot booked successfully' });
     } catch (err) {
